@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>reader</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/defualt.css"/>
+		<link rel="stylesheet" type="text/css" href="css/page/index.css"/>
+		
+	</head>
+	<body ng-app="readerhome" ng-controller="find">
+		<div class="header"><a href="index.html">reader 资源分享</a></div>
+	
+		<div class="container title">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>reader</h1>
+					<h3>免费的程序资源分享，及其技术指导服务</h3>
+					<p>收录了<span ng-bind="pagenum"></span>个共享资源</p>
+					<div class="search-bar">
+						<input type="text" class="form-control" ng-model="findtext" placeholder="开始搜索资源，例如：java"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" >
+			<div class="ccontext"> 
+				<a href="{{x.url}}" ng-repeat="x in page" class="package list-group-item " >
+					<div class="row">
+						<div class="col-md-3">
+							<h4 class="package-name"><span ng-bind="x.name"></span></h4>
+							<p class="uploadtime"><span ng-bind="x.time"></span></p>
+						</div>
+						<div class="col-md-9 hidden-xs">
+							<p class="package-description"><span ng-bind="x.context"></span></p>
+						</div>
+						
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="container footer">
+			<div class="container">
+				<div class="context">
+					<div class=" col-md-4 bak">
+						<h4>关于Reader</h4>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga saepe praesentium eius doloribus illum sequi inventore blanditiis soluta voluptatibus aut expedita dignissimos assumenda minus. Unde recusandae aperiam pariatur eaque impedit.</span>
+					</div>
+					<div class="col-md-3 bak">
+						<hr class="visible-sm-block visible-xs-block"/>
+						<h4>友情链接</h4>
+						<ul class="list-unstyled">
+							<li>
+								<a href="http://www.chinasofti.com/">中软国际</a>
+							</li>
+							<li>
+								<a href="http://www.5retc.com/">中软卓越ETC</a>
+							</li>
+							<li>
+								<a href="#">中软卓越(南京)EEC</a>
+							</li>
+							<li>
+								<a href="#">中软卓越(无锡)ETC</a>
+							</li>
+							<li>
+								<a href="#">中软卓越(苏州)中心</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-2 bak">
+						<hr class="visible-sm-block visible-xs-block"/>
+						<h4>使用技术</h4>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nesciunt repellendus error nobis est commodi earum soluta neque at rem doloremque possimus architecto ipsam placeat amet eum iusto a quis.</span>
+					</div>
+					<div class="col-md-2 bak">
+						<hr class="visible-sm-block visible-xs-block"/>
+						<h4>赞助入口</h4>
+						<span><a href="#">贡献自己一份力量</a></span>
+					</div>
+				</div>
+				<div class="col-xs-12 ">
+					<div class="copy">(c) Copyright 2017 mizzmiz0659. All Rights Reserved. </div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script src="js/angular.min.164.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/page/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

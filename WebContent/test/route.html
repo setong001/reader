@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- 
+		路由的使用：
+			1、在使用路由的时候需要导入 angular 和  angular-route文件
+			2、路由必须和<ng-view></ng-view>标签配合使用，映射出来的页面会出现在此标签里
+		-->
+		<script src="../js/angular.min.164.js" type="text/javascript" charset="utf-8"></script> 
+		<script src="../js/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<script type="text/javascript">
+			// 1、创建一个angular应用
+			var app = angular.module("routetest",["ngRoute"]);
+			
+			// 2、通过控制器指定相应的页面模板和控制程序
+			app.controller("myCtrl",function($scope){
+				
+			}).config(function($routeProvider){ // 为控制器添加模板
+				$routeProvider.when("/a",{templateUrl:"login.html",controller:"new1"})
+						      .when("/b",{templateUrl:"index.html",controller:"new2"})
+			});
+			
+			// 3、创建控制器用于处理相应的页面
+			app.controller("new1",function($scope){
+				$scope.$watch("newname",function(scope){
+					console.log(scope);
+				});
+			});
+			
+			app.controller("new2",function($scope){
+				$scope.name = "this is index.html";
+			});
+			
+		</script>
+	</head>
+	<body ng-app="routetest">
+		
+		<div ng-controller="myCtrl">
+			 <ul>
+	            <li><a href="#/a">click a</a></li>
+	            <li><a href="#/b">click b</a></li>
+	        </ul>
+	        
+	        <ng-view></ng-view>
+		</div>
+		
+	</body>
+</html>

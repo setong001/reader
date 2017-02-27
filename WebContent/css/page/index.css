@@ -1,0 +1,96 @@
+/**
+ * color:
+ * #e08031 
+ * #c7ceb2
+ * #199475
+ * #0b6e48
+ * #044d22
+ */
+.header{
+	text-align: center;
+	background-color: #044d22;
+	height: 35px;
+	line-height: 35px;
+}
+
+.header a{
+	color: #fff;
+	letter-spacing:16px;
+	text-transform:uppercase;
+}
+
+
+.title{
+	background-color: #0b6e48;
+	height: 280px;
+
+	color: #fff;
+	width: 100%;
+	padding: 0 60px;
+}
+
+.title h1{
+	font-size: 4em;
+	text-shadow: -5px 5px 0 rgba(0,0,0,0.1);
+	text-transform:capitalize;
+	text-align: center;
+	/*color:#e08031;*/
+}
+.title h3{
+	font-size: 1.62em;
+	text-align: center;
+}
+.title p{
+	text-align: center;
+}
+
+.search-bar{
+	margin: 38px auto;
+	width: 80%;
+}
+
+.ccontext{
+	margin: 40px 0px;
+	/*padding-right: 50px;*/
+	width: 100%;
+}
+
+.footer{
+	width: 100%;
+	/*height: 400px;*/
+	background-color: #0b6e48;
+	color: #fff;
+	
+}
+.footer .context{
+	/*height: 320px;*/
+	/*overflow: hidden;*/
+}
+
+.bak{
+	margin: 45px 0px;
+}
+.footer a{
+	color: #fff;
+	
+}
+
+.footer .copy{
+	margin: 20px 0;
+	text-align: center;
+	width: 100%;
+	background-color: #044d22;
+	height: 40px;
+	line-height: 40px;
+	font-size: 0.8em;
+}
+
+.package-name,.uploadtime{
+	display:block;
+}
+
+.uploadtime{
+	/*float: right;
+	margin-right: 50px;*/
+	color: #b3b3b3;
+}
